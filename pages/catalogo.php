@@ -216,7 +216,7 @@ require_once __DIR__ . '/../includes/header.php';
               ? round((($p['precio_original'] - $p['precio']) / $p['precio_original']) * 100)
               : 0;
             $es_fav = in_array($p['id'], $favoritos_ids);
-            $iconos = ['ordenadores'=>'🖥','portatiles'=>'💻','monitores'=>'📺','servidores'=>'🗄','accesorios'=>'🖱'];
+            $iconos = ['ordenadores'=>'<img src="<?= BASE_URL ?>/assets/img/desktop.svg" alt="Ordenador" style="width:48px;height:48px;object-fit:contain">','portatiles'=>'<img src="<?= BASE_URL ?>/assets/img/laptop.svg" alt="Portátil" style="width:48px;height:48px;object-fit:contain">','monitores'=>'<img src="<?= BASE_URL ?>/assets/img/monitor.svg" alt="Monitor" style="width:48px;height:48px;object-fit:contain">','servidores'=>'<img src="<?= BASE_URL ?>/assets/img/servidor.svg" alt="Servidor" style="width:48px;height:48px;object-fit:contain">','accesorios'=>'<img src="<?= BASE_URL ?>/assets/img/accesorios.svg" alt="Accesorios" style="width:48px;height:48px;object-fit:contain">'];
           ?>
             <div class="producto-card">
               <a href="<?= BASE_URL ?>/pages/producto.php?id=<?= $p['id'] ?>">

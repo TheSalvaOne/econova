@@ -73,7 +73,7 @@ require_once __DIR__ . '/../includes/header.php';
     <!-- Imagen -->
     <div>
       <div class="ficha-img-main">
-        <?= ['ordenadores'=>'🖥','portatiles'=>'💻','monitores'=>'📺','servidores'=>'🗄','accesorios'=>'🖱'][$p['cat_slug']] ?? '📦' ?>
+        <?= ['ordenadores'=>'<img src="<?= BASE_URL ?>/assets/img/desktop.svg" alt="Ordenador" style="width:48px;height:48px;object-fit:contain">','portatiles'=>'<img src="<?= BASE_URL ?>/assets/img/laptop.svg" alt="Portátil" style="width:48px;height:48px;object-fit:contain">','monitores'=>'<img src="<?= BASE_URL ?>/assets/img/monitor.svg" alt="Monitor" style="width:48px;height:48px;object-fit:contain">','servidores'=>'<img src="<?= BASE_URL ?>/assets/img/servidor.svg" alt="Servidor" style="width:48px;height:48px;object-fit:contain">','accesorios'=>'<img src="<?= BASE_URL ?>/assets/img/accesorios.svg" alt="Accesorios" style="width:48px;height:48px;object-fit:contain">'][$p['cat_slug']] ?? '📦' ?>
       </div>
       <!-- Grado explicado -->
       <div style="margin-top:1.5rem; background:var(--gris-lite); border-radius:8px; padding:1.25rem">
@@ -199,7 +199,7 @@ require_once __DIR__ . '/../includes/header.php';
           $r_specs  = json_decode($r['especificaciones'] ?? '{}', true);
           $r_ahorro = $r['precio_original']
             ? round((($r['precio_original'] - $r['precio']) / $r['precio_original']) * 100) : 0;
-          $iconos = ['ordenadores'=>'🖥','portatiles'=>'💻','monitores'=>'📺','servidores'=>'🗄','accesorios'=>'🖱'];
+          $iconos = ['ordenadores'=>'<img src="<?= BASE_URL ?>/assets/img/desktop.svg" alt="Ordenador" style="width:48px;height:48px;object-fit:contain">','portatiles'=>'<img src="<?= BASE_URL ?>/assets/img/laptop.svg" alt="Portátil" style="width:48px;height:48px;object-fit:contain">','monitores'=>'<img src="<?= BASE_URL ?>/assets/img/monitor.svg" alt="Monitor" style="width:48px;height:48px;object-fit:contain">','servidores'=>'<img src="<?= BASE_URL ?>/assets/img/servidor.svg" alt="Servidor" style="width:48px;height:48px;object-fit:contain">','accesorios'=>'<img src="<?= BASE_URL ?>/assets/img/accesorios.svg" alt="Accesorios" style="width:48px;height:48px;object-fit:contain">'];
         ?>
           <div class="producto-card">
             <a href="<?= BASE_URL ?>/pages/producto.php?id=<?= $r['id'] ?>">

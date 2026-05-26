@@ -116,7 +116,7 @@ require_once __DIR__ . '/includes/header.php';
     <h2 style="margin-bottom:2rem">Encuentra lo que necesitas</h2>
     <div class="categorias-grid">
       <?php
-      $iconos = ['ordenadores'=>'🖥','portatiles'=>'💻','monitores'=>'📺','servidores'=>'🗄','accesorios'=>'🖱'];
+      $iconos = ['ordenadores'=>'<img src="<?= BASE_URL ?>/assets/img/desktop.svg" alt="Ordenador" style="width:48px;height:48px;object-fit:contain">','portatiles'=>'<img src="<?= BASE_URL ?>/assets/img/laptop.svg" alt="Portátil" style="width:48px;height:48px;object-fit:contain">','monitores'=>'<img src="<?= BASE_URL ?>/assets/img/monitor.svg" alt="Monitor" style="width:48px;height:48px;object-fit:contain">','servidores'=>'<img src="<?= BASE_URL ?>/assets/img/servidor.svg" alt="Servidor" style="width:48px;height:48px;object-fit:contain">','accesorios'=>'<img src="<?= BASE_URL ?>/assets/img/accesorios.svg" alt="Accesorios" style="width:48px;height:48px;object-fit:contain">'];
       foreach ($categorias as $cat): ?>
         <a href="<?= BASE_URL ?>/pages/catalogo.php?cat=<?= e($cat['slug']) ?>" class="categoria-card">
           <span class="categoria-icon"><?= $iconos[$cat['slug']] ?? '📦' ?></span>
@@ -147,7 +147,7 @@ require_once __DIR__ . '/includes/header.php';
           <a href="<?= BASE_URL ?>/pages/producto.php?id=<?= $p['id'] ?>">
             <div class="producto-img">
               <div class="producto-img-placeholder">
-                <?= ['ordenadores'=>'🖥','portatiles'=>'💻','monitores'=>'📺','servidores'=>'🗄','accesorios'=>'🖱'][$p['cat_slug']] ?? '📦' ?>
+                <?= ['ordenadores'=>'<img src="<?= BASE_URL ?>/assets/img/desktop.svg" alt="Ordenador" style="width:48px;height:48px;object-fit:contain">','portatiles'=>'<img src="<?= BASE_URL ?>/assets/img/laptop.svg" alt="Portátil" style="width:48px;height:48px;object-fit:contain">','monitores'=>'<img src="<?= BASE_URL ?>/assets/img/monitor.svg" alt="Monitor" style="width:48px;height:48px;object-fit:contain">','servidores'=>'<img src="<?= BASE_URL ?>/assets/img/servidor.svg" alt="Servidor" style="width:48px;height:48px;object-fit:contain">','accesorios'=>'<img src="<?= BASE_URL ?>/assets/img/accesorios.svg" alt="Accesorios" style="width:48px;height:48px;object-fit:contain">'][$p['cat_slug']] ?? '📦' ?>
               </div>
               <div class="producto-badges">
                 <span class="badge badge-grado-<?= strtolower($p['grado']) ?>">Grado <?= e($p['grado']) ?></span>

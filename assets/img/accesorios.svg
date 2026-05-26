@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Dock station -->
+  <rect x="130" y="60" width="140" height="90" rx="8" fill="#1A1A1A"/>
+  <rect x="138" y="68" width="124" height="74" rx="5" fill="#111"/>
+  <!-- Puertos dock -->
+  <rect x="146" y="76" width="16" height="10" rx="2" fill="#F06A00" opacity="0.7"/>
+  <rect x="168" y="76" width="16" height="10" rx="2" fill="#333"/>
+  <rect x="190" y="76" width="16" height="10" rx="2" fill="#333"/>
+  <rect x="212" y="76" width="16" height="10" rx="2" fill="#333"/>
+  <rect x="234" y="76" width="16" height="10" rx="2" fill="#333"/>
+  <!-- Cable USB-C -->
+  <rect x="146" y="94" width="108" height="6" rx="2" fill="#222"/>
+  <!-- Indicadores LED -->
+  <circle cx="152" cy="108" r="4" fill="#22C55E"/>
+  <circle cx="166" cy="108" r="4" fill="#22C55E"/>
+  <circle cx="180" cy="108" r="4" fill="#EAB308"/>
+  <circle cx="194" cy="108" r="4" fill="#333"/>
+  <!-- Etiqueta -->
+  <rect x="146" y="120" width="108" height="14" rx="2" fill="#0D0D0D"/>
+  <rect x="152" y="124" width="60" height="6" rx="2" fill="#F06A00" opacity="0.4"/>
+  <!-- Cable hacia abajo -->
+  <path d="M 200 150 Q 200 165 185 170 Q 170 175 170 190" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Teclado -->
+  <rect x="50" y="195" width="180" height="70" rx="6" fill="#2A2A2A"/>
+  <rect x="56" y="201" width="168" height="58" rx="4" fill="#1E1E1E"/>
+  <!-- Teclas fila 1 -->
+  <rect x="60" y="206" width="12" height="10" rx="2" fill="#333"/>
+  <rect x="76" y="206" width="12" height="10" rx="2" fill="#333"/>
+  <rect x="92" y="206" width="12" height="10" rx="2" fill="#333"/>
+  <rect x="108" y="206" width="12" height="10" rx="2" fill="#333"/>
+  <rect x="124" y="206" width="12" height="10" rx="2" fill="#333"/>
+  <rect x="140" y="206" width="12" height="10" rx="2" fill="#333"/>
+  <rect x="156" y="206" width="12" height="10" rx="2" fill="#333"/>
+  <rect x="172" y="206" width="12" height="10" rx="2" fill="#F06A00" opacity="0.6"/>
+  <rect x="188" y="206" width="26" height="10" rx="2" fill="#333"/>
+  <!-- Teclas fila 2 -->
+  <rect x="60" y="220" width="18" height="10" rx="2" fill="#333"/>
+  <rect x="82" y="220" width="12" height="10" rx="2" fill="#333"/>
+  <rect x="98" y="220" width="12" height="10" rx="2" fill="#333"/>
+  <rect x="114" y="220" width="12" height="10" rx="2" fill="#333"/>
+  <rect x="130" y="220" width="12" height="10" rx="2" fill="#333"/>
+  <rect x="146" y="220" width="12" height="10" rx="2" fill="#333"/>
+  <rect x="162" y="220" width="12" height="10" rx="2" fill="#333"/>
+  <rect x="178" y="220" width="36" height="10" rx="2" fill="#333"/>
+  <!-- Barra espaciadora -->
+  <rect x="82" y="248" width="100" height="10" rx="3" fill="#333"/>
+  <!-- Logo -->
+  <rect x="60" y="248" width="16" height="10" rx="2" fill="#F06A00" opacity="0.4"/>
+
+  <!-- Ratón -->
+  <ellipse cx="320" cy="220" rx="35" ry="50" fill="#2A2A2A"/>
+  <ellipse cx="320" cy="195" rx="30" ry="20" fill="#1E1E1E"/>
+  <rect x="318" y="178" width="4" height="30" rx="2" fill="#111"/>
+  <ellipse cx="320" cy="240" rx="25" ry="22" fill="#1E1E1E"/>
+  <circle cx="320" cy="220" r="4" fill="#F06A00" opacity="0.5"/>
+</svg>
