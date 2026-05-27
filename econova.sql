@@ -26,10 +26,10 @@ CREATE TABLE usuarios (
   INDEX idx_rol   (rol)
 ) ENGINE=InnoDB;
 
--- Admin por defecto  (password: Admin1234!)
+-- Admin por defecto  (password: Fp.2026)
 INSERT INTO usuarios (nombre, email, password, rol) VALUES
 ('Administrador', 'admin@econova.local',
- '$2y$12$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin');
+ '$2y$12$zRj4H.A5IkRc47ZUDIftZus.hYGIYtBbh4dAQKNQZ.lEoaCvcSrsG', 'admin');
 
 -- -------------------------------------------------------
 -- CATEGORÍAS

@@ -12,8 +12,8 @@
       </a>
       <p>Tecnología con segunda vida.<br>Sostenibilidad sin renunciar al rendimiento.</p>
       <div class="footer-sostenibilidad">
-        <span>♻ CO₂ ahorrado por reutilización</span>
-        <span>🌱 0 residuos electrónicos innecesarios</span>
+        <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><polyline points="1.5 8.5 1.5 3.5 6.5 3.5"/><path d="M1.5 3.5C3.5 6 6 8 9 9"/><polyline points="22.5 15.5 22.5 20.5 17.5 20.5"/><path d="M22.5 20.5C20.5 18 18 16 15 15"/><polyline points="6.5 20.5 1.5 20.5 1.5 15.5"/><path d="M1.5 20.5C4 18 6.5 15.5 8 12"/><polyline points="17.5 3.5 22.5 3.5 22.5 8.5"/><path d="M22.5 3.5C20 6 17.5 8.5 16 12"/></svg> CO₂ ahorrado por reutilización</span>
+        <span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><path d="M12 22V12"/><path d="M12 12C12 7 17 3 21 3c0 5-3 9-9 9z"/><path d="M12 12C12 7 7 3 3 3c0 5 3 9 9 9z"/></svg> 0 residuos electrónicos innecesarios</span>
       </div>
     </div>
 

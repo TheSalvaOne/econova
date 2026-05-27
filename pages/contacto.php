@@ -44,21 +44,21 @@ require_once __DIR__ . '/../includes/header.php';
       </p>
       <div style="margin-top:2rem; display:flex; flex-direction:column; gap:1rem">
         <div style="display:flex; gap:.75rem; align-items:center">
-          <span style="font-size:1.5rem">📧</span>
+          <span style="font-size:1.5rem"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
           <div>
             <div style="font-weight:700; font-size:.9rem">Email</div>
             <div style="color:var(--gris-medio); font-size:.875rem">hola@econova.local</div>
           </div>
         </div>
         <div style="display:flex; gap:.75rem; align-items:center">
-          <span style="font-size:1.5rem">📍</span>
+          <span style="font-size:1.5rem"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
           <div>
             <div style="font-weight:700; font-size:.9rem">Dirección</div>
             <div style="color:var(--gris-medio); font-size:.875rem">Calle Ejemplo 1, Madrid</div>
           </div>
         </div>
         <div style="display:flex; gap:.75rem; align-items:center">
-          <span style="font-size:1.5rem">⏰</span>
+          <span style="font-size:1.5rem"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
           <div>
             <div style="font-weight:700; font-size:.9rem">Horario</div>
             <div style="color:var(--gris-medio); font-size:.875rem">Lun–Vie, 9:00–18:00</div>
@@ -70,7 +70,7 @@ require_once __DIR__ . '/../includes/header.php';
     <div>
       <?php if ($enviado): ?>
         <div class="form-success" style="padding:2rem; text-align:center">
-          <div style="font-size:2rem; margin-bottom:.75rem">✅</div>
+          <div style="font-size:2rem; margin-bottom:.75rem"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="2.5" style="vertical-align:middle;margin-right:4px"><polyline points="20 6 9 17 4 12"/></svg></div>
           <h3>¡Mensaje enviado!</h3>
           <p style="margin-top:.5rem; color:var(--gris-medio)">Te respondemos en menos de 24h.</p>
         </div>

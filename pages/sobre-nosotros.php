@@ -93,9 +93,9 @@ require_once __DIR__ . '/../includes/header.php';
     <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:2rem">
       <?php
       $impacto = [
-        ['🌍','300 kg de CO₂','emitidos en la fabricación de un portátil medio.'],
-        ['💧','190.000 litros','de agua necesarios para fabricar un ordenador de sobremesa.'],
-        ['♻ -80%','Menos energía','requiere reacondicionar frente a fabricar de cero.'],
+        ['&#x1F30D;','300 kg de CO₂','emitidos en la fabricación de un portátil medio.'],
+        ['&#x1F4A7;','190.000 litros','de agua necesarios para fabricar un ordenador de sobremesa.'],
+        ['<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><polyline points="1.5 8.5 1.5 3.5 6.5 3.5"/><path d="M1.5 3.5C3.5 6 6 8 9 9"/><polyline points="22.5 15.5 22.5 20.5 17.5 20.5"/><path d="M22.5 20.5C20.5 18 18 16 15 15"/><polyline points="6.5 20.5 1.5 20.5 1.5 15.5"/><path d="M1.5 20.5C4 18 6.5 15.5 8 12"/><polyline points="17.5 3.5 22.5 3.5 22.5 8.5"/><path d="M22.5 3.5C20 6 17.5 8.5 16 12"/></svg> -80%','Menos energía','requiere reacondicionar frente a fabricar de cero.'],
       ];
       foreach ($impacto as $i):
       ?>

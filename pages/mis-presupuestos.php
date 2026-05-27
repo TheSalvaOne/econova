@@ -22,12 +22,12 @@ require_once __DIR__ . '/../includes/header.php';
   <p style="color:var(--gris-medio); margin-bottom:2rem">Historial de solicitudes enviadas a EcoNova.</p>
 
   <?php if (!empty($_GET['nuevo'])): ?>
-    <div class="form-success">✅ ¡Presupuesto solicitado! Te contactaremos en 24-48h.</div>
+    <div class="form-success"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="2.5" style="vertical-align:middle;margin-right:4px"><polyline points="20 6 9 17 4 12"/></svg> ¡Presupuesto solicitado! Te contactaremos en 24-48h.</div>
   <?php endif; ?>
 
   <?php if (empty($presupuestos)): ?>
     <div class="empty-state">
-      <div class="empty-state-icon">📋</div>
+      <div class="empty-state-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg></div>
       <h3>Sin presupuestos</h3>
       <p>Añade equipos al carrito y solicita tu primer presupuesto.</p>
       <a href="<?= BASE_URL ?>/pages/catalogo.php" class="btn btn-primary mt-4">Explorar catálogo</a>

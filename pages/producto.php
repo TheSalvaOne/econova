@@ -64,7 +64,7 @@ require_once __DIR__ . '/../includes/header.php';
   </div>
 
   <?php if ($msg === 'carrito_ok'): ?>
-    <div class="form-success">✅ Producto añadido al carrito correctamente.</div>
+    <div class="form-success"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="2.5" style="vertical-align:middle;margin-right:4px"><polyline points="20 6 9 17 4 12"/></svg> Producto añadido al carrito correctamente.</div>
   <?php endif; ?>
 
   <!-- Ficha principal -->
@@ -73,7 +73,7 @@ require_once __DIR__ . '/../includes/header.php';
     <!-- Imagen -->
     <div>
       <div class="ficha-img-main">
-        <?= ['ordenadores'=>'<img src="<?= BASE_URL ?>/assets/img/desktop.svg" alt="Ordenador" style="width:48px;height:48px;object-fit:contain">','portatiles'=>'<img src="<?= BASE_URL ?>/assets/img/laptop.svg" alt="Portátil" style="width:48px;height:48px;object-fit:contain">','monitores'=>'<img src="<?= BASE_URL ?>/assets/img/monitor.svg" alt="Monitor" style="width:48px;height:48px;object-fit:contain">','servidores'=>'<img src="<?= BASE_URL ?>/assets/img/servidor.svg" alt="Servidor" style="width:48px;height:48px;object-fit:contain">','accesorios'=>'<img src="<?= BASE_URL ?>/assets/img/accesorios.svg" alt="Accesorios" style="width:48px;height:48px;object-fit:contain">'][$p['cat_slug']] ?? '📦' ?>
+        <img src="<?= ['ordenadores'=> BASE_URL.'/assets/img/desktop.svg','portatiles'=>BASE_URL.'/assets/img/laptop.svg','monitores'=>BASE_URL.'/assets/img/monitor.svg','servidores'=>BASE_URL.'/assets/img/servidor.svg','accesorios'=>BASE_URL.'/assets/img/accesorios.svg'][$p['cat_slug']] ?? BASE_URL.'/assets/img/accesorios.svg' ?>" alt="<?= e($p['nombre']) ?>" style="width:100%;height:100%;object-fit:contain;padding:2rem">
       </div>
       <!-- Grado explicado -->
       <div style="margin-top:1.5rem; background:var(--gris-lite); border-radius:8px; padding:1.25rem">
@@ -134,7 +134,7 @@ require_once __DIR__ . '/../includes/header.php';
 
       <!-- Stock -->
       <?php if ($p['stock'] > 0): ?>
-        <p class="ficha-stock">✅ <?= $p['stock'] ?> unidades disponibles · Envío en 24-48h</p>
+        <p class="ficha-stock"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="2.5" style="vertical-align:middle;margin-right:4px"><polyline points="20 6 9 17 4 12"/></svg> <?= $p['stock'] ?> unidades disponibles · Envío en 24-48h</p>
       <?php else: ?>
         <p style="color:#C0392B; font-size:.875rem">⚠ Sin stock actualmente</p>
       <?php endif; ?>
@@ -148,7 +148,7 @@ require_once __DIR__ . '/../includes/header.php';
               <input type="hidden" name="producto_id" value="<?= $p['id'] ?>">
               <input type="hidden" name="redirect" value="<?= BASE_URL ?>/pages/producto.php?id=<?= $p['id'] ?>&msg=carrito_ok">
               <button type="submit" class="btn btn-primary">
-                🛒 Añadir al carrito
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> Añadir al carrito
               </button>
             </form>
           <?php else: ?>
@@ -175,16 +175,16 @@ require_once __DIR__ . '/../includes/header.php';
       <!-- Info garantía -->
       <div style="display:grid; grid-template-columns:1fr 1fr; gap:.75rem; margin-top:.5rem">
         <div style="background:var(--gris-lite); border-radius:6px; padding:.875rem; font-size:.82rem">
-          🔧 <strong>2 años de garantía</strong><br>en hardware
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> <strong>2 años de garantía</strong><br>en hardware
         </div>
         <div style="background:var(--gris-lite); border-radius:6px; padding:.875rem; font-size:.82rem">
-          🚚 <strong>Envío 24-48h</strong><br>península
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> <strong>Envío 24-48h</strong><br>península
         </div>
         <div style="background:var(--gris-lite); border-radius:6px; padding:.875rem; font-size:.82rem">
-          ✅ <strong>Revisado</strong><br>por técnicos certificados
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="2.5" style="vertical-align:middle;margin-right:4px"><polyline points="20 6 9 17 4 12"/></svg> <strong>Revisado</strong><br>por técnicos certificados
         </div>
         <div style="background:var(--gris-lite); border-radius:6px; padding:.875rem; font-size:.82rem">
-          ♻ <strong>Sostenible</strong><br>CO₂ evitado certificado
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><polyline points="1.5 8.5 1.5 3.5 6.5 3.5"/><path d="M1.5 3.5C3.5 6 6 8 9 9"/><polyline points="22.5 15.5 22.5 20.5 17.5 20.5"/><path d="M22.5 20.5C20.5 18 18 16 15 15"/><polyline points="6.5 20.5 1.5 20.5 1.5 15.5"/><path d="M1.5 20.5C4 18 6.5 15.5 8 12"/><polyline points="17.5 3.5 22.5 3.5 22.5 8.5"/><path d="M22.5 3.5C20 6 17.5 8.5 16 12"/></svg> <strong>Sostenible</strong><br>CO₂ evitado certificado
         </div>
       </div>
     </div>
@@ -199,12 +199,12 @@ require_once __DIR__ . '/../includes/header.php';
           $r_specs  = json_decode($r['especificaciones'] ?? '{}', true);
           $r_ahorro = $r['precio_original']
             ? round((($r['precio_original'] - $r['precio']) / $r['precio_original']) * 100) : 0;
-          $iconos = ['ordenadores'=>'<img src="<?= BASE_URL ?>/assets/img/desktop.svg" alt="Ordenador" style="width:48px;height:48px;object-fit:contain">','portatiles'=>'<img src="<?= BASE_URL ?>/assets/img/laptop.svg" alt="Portátil" style="width:48px;height:48px;object-fit:contain">','monitores'=>'<img src="<?= BASE_URL ?>/assets/img/monitor.svg" alt="Monitor" style="width:48px;height:48px;object-fit:contain">','servidores'=>'<img src="<?= BASE_URL ?>/assets/img/servidor.svg" alt="Servidor" style="width:48px;height:48px;object-fit:contain">','accesorios'=>'<img src="<?= BASE_URL ?>/assets/img/accesorios.svg" alt="Accesorios" style="width:48px;height:48px;object-fit:contain">'];
+          $iconos = ['ordenadores'=> BASE_URL.'/assets/img/desktop.svg','portatiles'=>BASE_URL.'/assets/img/laptop.svg','monitores'=>BASE_URL.'/assets/img/monitor.svg','servidores'=>BASE_URL.'/assets/img/servidor.svg','accesorios'=>BASE_URL.'/assets/img/accesorios.svg'];
         ?>
           <div class="producto-card">
             <a href="<?= BASE_URL ?>/pages/producto.php?id=<?= $r['id'] ?>">
               <div class="producto-img">
-                <div class="producto-img-placeholder"><?= $iconos[$r['cat_slug']] ?? '📦' ?></div>
+                <div class="producto-img-placeholder"><img src="<?= isset($iconos[$p['cat_slug']]) ? $iconos[$p['cat_slug']] : (isset($iconos[$r['cat_slug']]) ? $iconos[$r['cat_slug']] : BASE_URL.'/assets/img/accesorios.svg') ?>" alt="" style="width:100%;height:100%;object-fit:contain;padding:1rem"></div>
                 <div class="producto-badges">
                   <span class="badge badge-grado-<?= strtolower($r['grado']) ?>">Grado <?= e($r['grado']) ?></span>
                 </div>

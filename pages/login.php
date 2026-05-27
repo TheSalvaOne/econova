@@ -57,7 +57,7 @@ require_once __DIR__ . '/../includes/header.php';
       <div class="form-error"><?= e($error) ?></div>
     <?php endif; ?>
     <?php if (!empty($_GET['registered'])): ?>
-      <div class="form-success">✅ Cuenta creada. Ya puedes entrar.</div>
+      <div class="form-success"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22C55E" stroke-width="2.5" style="vertical-align:middle;margin-right:4px"><polyline points="20 6 9 17 4 12"/></svg> Cuenta creada. Ya puedes entrar.</div>
     <?php endif; ?>
 
     <form method="POST">

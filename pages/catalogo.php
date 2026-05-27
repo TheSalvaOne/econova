@@ -204,7 +204,7 @@ require_once __DIR__ . '/../includes/header.php';
 
       <?php if (empty($productos)): ?>
         <div class="empty-state">
-          <div class="empty-state-icon">🔍</div>
+          <div class="empty-state-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
           <h3>No encontramos equipos</h3>
           <p>Prueba a cambiar los filtros o <a href="<?= BASE_URL ?>/pages/catalogo.php" style="color:var(--naranja)">ver todo el catálogo</a>.</p>
         </div>
@@ -216,12 +216,12 @@ require_once __DIR__ . '/../includes/header.php';
               ? round((($p['precio_original'] - $p['precio']) / $p['precio_original']) * 100)
               : 0;
             $es_fav = in_array($p['id'], $favoritos_ids);
-            $iconos = ['ordenadores'=>'<img src="<?= BASE_URL ?>/assets/img/desktop.svg" alt="Ordenador" style="width:48px;height:48px;object-fit:contain">','portatiles'=>'<img src="<?= BASE_URL ?>/assets/img/laptop.svg" alt="Portátil" style="width:48px;height:48px;object-fit:contain">','monitores'=>'<img src="<?= BASE_URL ?>/assets/img/monitor.svg" alt="Monitor" style="width:48px;height:48px;object-fit:contain">','servidores'=>'<img src="<?= BASE_URL ?>/assets/img/servidor.svg" alt="Servidor" style="width:48px;height:48px;object-fit:contain">','accesorios'=>'<img src="<?= BASE_URL ?>/assets/img/accesorios.svg" alt="Accesorios" style="width:48px;height:48px;object-fit:contain">'];
+            $iconos = ['ordenadores'=> BASE_URL.'/assets/img/desktop.svg','portatiles'=>BASE_URL.'/assets/img/laptop.svg','monitores'=>BASE_URL.'/assets/img/monitor.svg','servidores'=>BASE_URL.'/assets/img/servidor.svg','accesorios'=>BASE_URL.'/assets/img/accesorios.svg'];
           ?>
             <div class="producto-card">
               <a href="<?= BASE_URL ?>/pages/producto.php?id=<?= $p['id'] ?>">
                 <div class="producto-img">
-                  <div class="producto-img-placeholder"><?= $iconos[$p['cat_slug']] ?? '📦' ?></div>
+                  <div class="producto-img-placeholder"><img src="<?= $iconos[$p['cat_slug']] ?? BASE_URL.'/assets/img/accesorios.svg' ?>" alt="<?= e($p['nombre']) ?>" style="width:100%;height:100%;object-fit:contain;padding:1rem"></div>
                   <div class="producto-badges">
                     <span class="badge badge-grado-<?= strtolower($p['grado']) ?>">Grado <?= e($p['grado']) ?></span>
                     <?php if ($ahorro >= 55): ?><span class="badge badge-nuevo">-<?= $ahorro ?>%</span><?php endif; ?>
@@ -235,10 +235,10 @@ require_once __DIR__ . '/../includes/header.php';
                 </a>
                 <?php if (!empty($specs)): ?>
                   <div class="producto-specs">
-                    <?php if (!empty($specs['cpu'])): ?><span>⚡ <?= e($specs['cpu']) ?></span><?php endif; ?>
-                    <?php if (!empty($specs['ram'])): ?><span>💾 <?= e($specs['ram']) ?></span><?php endif; ?>
-                    <?php if (!empty($specs['almacenamiento'])): ?><span>💿 <?= e($specs['almacenamiento']) ?></span><?php endif; ?>
-                    <?php if (!empty($specs['pantalla'])): ?><span>🖥 <?= e($specs['pantalla']) ?></span><?php endif; ?>
+                    <?php if (!empty($specs['cpu'])): ?><span><svg viewBox="0 0 16 16" width="14" height="14" fill="#F06A00" style="vertical-align:middle;margin-right:3px"><path d="M9.5 1L3 9h5l-1.5 6L14 7H9L9.5 1z"/></svg> <?= e($specs['cpu']) ?></span><?php endif; ?>
+                    <?php if (!empty($specs['ram'])): ?><span><svg viewBox="0 0 16 16" width="14" height="14" fill="#F06A00" style="vertical-align:middle;margin-right:3px"><rect x="2" y="2" width="12" height="12" rx="1"/><rect x="5" y="2" width="6" height="5" fill="#fff" rx="0.5"/><rect x="4" y="9" width="8" height="4" fill="#fff" rx="0.5"/></svg> <?= e($specs['ram']) ?></span><?php endif; ?>
+                    <?php if (!empty($specs['almacenamiento'])): ?><span><svg viewBox="0 0 16 16" width="14" height="14" fill="#F06A00" style="vertical-align:middle;margin-right:3px"><circle cx="8" cy="8" r="6" stroke="#F06A00" stroke-width="1.5" fill="none"/><circle cx="8" cy="8" r="2"/></svg> <?= e($specs['almacenamiento']) ?></span><?php endif; ?>
+                    <?php if (!empty($specs['pantalla'])): ?><span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#F06A00" stroke-width="2" style="vertical-align:middle;margin-right:3px"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> <?= e($specs['pantalla']) ?></span><?php endif; ?>
                   </div>
                 <?php endif; ?>
                 <div class="producto-precios">

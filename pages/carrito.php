@@ -84,7 +84,7 @@ require_once __DIR__ . '/../includes/header.php';
 
   <?php if (empty($items)): ?>
     <div class="empty-state">
-      <div class="empty-state-icon">🛒</div>
+      <div class="empty-state-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
       <h3>Tu carrito está vacío</h3>
       <p>Explora nuestro catálogo y añade equipos.</p>
       <a href="<?= BASE_URL ?>/pages/catalogo.php" class="btn btn-primary mt-4">Ver catálogo</a>
@@ -95,10 +95,10 @@ require_once __DIR__ . '/../includes/header.php';
       <!-- Items -->
       <div>
         <?php
-        $iconos = ['ordenadores'=>'<img src="<?= BASE_URL ?>/assets/img/desktop.svg" alt="Ordenador" style="width:48px;height:48px;object-fit:contain">','portatiles'=>'<img src="<?= BASE_URL ?>/assets/img/laptop.svg" alt="Portátil" style="width:48px;height:48px;object-fit:contain">','monitores'=>'<img src="<?= BASE_URL ?>/assets/img/monitor.svg" alt="Monitor" style="width:48px;height:48px;object-fit:contain">','servidores'=>'<img src="<?= BASE_URL ?>/assets/img/servidor.svg" alt="Servidor" style="width:48px;height:48px;object-fit:contain">','accesorios'=>'<img src="<?= BASE_URL ?>/assets/img/accesorios.svg" alt="Accesorios" style="width:48px;height:48px;object-fit:contain">'];
+        $iconos = ['ordenadores'=> BASE_URL.'/assets/img/desktop.svg','portatiles'=>BASE_URL.'/assets/img/laptop.svg','monitores'=>BASE_URL.'/assets/img/monitor.svg','servidores'=>BASE_URL.'/assets/img/servidor.svg','accesorios'=>BASE_URL.'/assets/img/accesorios.svg'];
         foreach ($items as $item): ?>
           <div class="carrito-item">
-            <div class="carrito-item-img"><?= $iconos[$item['cat_slug']] ?? '📦' ?></div>
+            <div class="carrito-item-img"><?= $iconos[$item['cat_slug']] ?? '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>' ?></div>
             <div style="flex:1">
               <a href="<?= BASE_URL ?>/pages/producto.php?id=<?= $item['id'] ?>" style="font-family:var(--font-display); font-weight:700">
                 <?= e($item['nombre']) ?>
@@ -158,7 +158,7 @@ require_once __DIR__ . '/../includes/header.php';
               <textarea name="notas" rows="3" placeholder="Necesidades especiales, cantidad, empresa..."></textarea>
             </div>
             <button type="submit" name="solicitar_presupuesto" value="1" class="btn btn-primary" style="width:100%">
-              📋 Solicitar presupuesto
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg> Solicitar presupuesto
             </button>
           </form>
         </div>

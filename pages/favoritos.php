@@ -23,7 +23,7 @@ require_once __DIR__ . '/../includes/header.php';
 
   <?php if (empty($favoritos)): ?>
     <div class="empty-state">
-      <div class="empty-state-icon">❤</div>
+      <div class="empty-state-icon"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
       <h3>Sin favoritos aún</h3>
       <p>Guarda los equipos que te interesan para encontrarlos fácilmente.</p>
       <a href="<?= BASE_URL ?>/pages/catalogo.php" class="btn btn-primary mt-4">Explorar catálogo</a>
@@ -31,7 +31,7 @@ require_once __DIR__ . '/../includes/header.php';
   <?php else: ?>
     <div class="productos-grid">
       <?php
-      $iconos = ['ordenadores'=>'<img src="<?= BASE_URL ?>/assets/img/desktop.svg" alt="Ordenador" style="width:48px;height:48px;object-fit:contain">','portatiles'=>'<img src="<?= BASE_URL ?>/assets/img/laptop.svg" alt="Portátil" style="width:48px;height:48px;object-fit:contain">','monitores'=>'<img src="<?= BASE_URL ?>/assets/img/monitor.svg" alt="Monitor" style="width:48px;height:48px;object-fit:contain">','servidores'=>'<img src="<?= BASE_URL ?>/assets/img/servidor.svg" alt="Servidor" style="width:48px;height:48px;object-fit:contain">','accesorios'=>'<img src="<?= BASE_URL ?>/assets/img/accesorios.svg" alt="Accesorios" style="width:48px;height:48px;object-fit:contain">'];
+      $iconos = ['ordenadores'=> BASE_URL.'/assets/img/desktop.svg','portatiles'=>BASE_URL.'/assets/img/laptop.svg','monitores'=>BASE_URL.'/assets/img/monitor.svg','servidores'=>BASE_URL.'/assets/img/servidor.svg','accesorios'=>BASE_URL.'/assets/img/accesorios.svg'];
       foreach ($favoritos as $p):
         $ahorro = $p['precio_original']
           ? round((($p['precio_original']-$p['precio'])/$p['precio_original'])*100) : 0;
@@ -39,7 +39,7 @@ require_once __DIR__ . '/../includes/header.php';
         <div class="producto-card">
           <a href="<?= BASE_URL ?>/pages/producto.php?id=<?= $p['id'] ?>">
             <div class="producto-img">
-              <div class="producto-img-placeholder"><?= $iconos[$p['cat_slug']] ?? '📦' ?></div>
+              <div class="producto-img-placeholder"><img src="<?= $iconos[$p['cat_slug']] ?? BASE_URL.'/assets/img/accesorios.svg' ?>" alt="<?= e($p['nombre']) ?>" style="width:100%;height:100%;object-fit:contain;padding:1rem"></div>
               <div class="producto-badges">
                 <span class="badge badge-grado-<?= strtolower($p['grado']) ?>">Grado <?= e($p['grado']) ?></span>
               </div>
