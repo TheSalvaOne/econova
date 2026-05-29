@@ -824,19 +824,19 @@ econova-smr/
 
 ## 14. Credenciales de prueba
 
-> ⚠️ Solo para entorno de laboratorio. Nunca usar estas contraseñas en producción.
+> ⚠️ Las credenciales del entorno de laboratorio no se publican en el repositorio por seguridad. Consultar la memoria técnica entregada al tribunal para obtener los datos de acceso.
 
 | Acceso | Usuario | Contraseña |
 |---|---|---|
-| Web EcoNova (admin) | `admin@econova.local` | `Fp.2026` |
+| Web EcoNova (admin) | `admin@econova.local` | Ver memoria técnica |
 | Web EcoNova (cliente) | Registrarse en `/pages/registro.php` | — |
-| Intranet | `admin` | Consultar `includes/config.php` |
-| Administrador dominio | `ECONOVA\Administrador` | `Fp.2026` |
-| Contraseña DSRM | — | `Fp.2026` |
-| empleado01 | `empleado01` | `Econova.2026` |
-| empleado02 | `empleado02` | `Econova.2026` |
-| Proxmox | `root` | (definida en instalación) |
-| phpMyAdmin | `root` | (vacía en XAMPP local) |
+| Intranet | `admin` | Ver memoria técnica |
+| Administrador dominio | `ECONOVA\Administrador` | Ver memoria técnica |
+| Contraseña DSRM | — | Ver memoria técnica |
+| empleado01 | `empleado01` | Ver memoria técnica |
+| empleado02 | `empleado02` | Ver memoria técnica |
+| Proxmox | `root` | Ver memoria técnica |
+| phpMyAdmin | `root` | Ver memoria técnica |
 
 ---
 
